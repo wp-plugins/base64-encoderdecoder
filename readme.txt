@@ -48,7 +48,7 @@ I thought you wouldn't ask. You can send me some bucks via PayPal, even USD$1 it
 
 == Screenshots ==
 
-1. Base64 screenshot showing how the tag works in editor mode and how it's seen when reading it `/tags/0.6/plugin-base64.jpg`
+1. Base64 screenshot showing how the tag works in editor mode and how it's seen when reading it.
 
 == Credits ==
 
