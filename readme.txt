@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: comments, tag, encoder, decoder, base64
 Requires at least: 2.1
 Tested up to: 2.7
-Stable tag: 0.61
+Stable tag: 0.7
 
 Enables you to encode parts of your post in base64.
 
@@ -16,7 +16,7 @@ It uses html-styled `<base64>` and `</base64>` tags for opening and closing the 
 
 You can add the tags typing them or using the quicktag button in HTML editing mode. For now I don't provide a quicktag button in Visual editing mode, but I expect to add that in next version.
 
-Previous versions of this plugin used `<!--base64-->` and `<!--/base64-->` tags. You don't have to modify that posts, the new tag format has retro-compatibility. In next version of the plugin I expect to provide a manual one-button replacement from old tags to new tags.
+Previous versions of this plugin used `<!--base64-->` and `<!--/base64-->` tags. You don't have to modify that posts, the new tag format has retro-compatibility. But if you wish you can update the database replacing the old tag format to the new tag format with just one click.
 
 == Installation ==
 
@@ -34,7 +34,7 @@ Yes, you can include html tags, they will be encrypted too.
 
 = I'm using an older version of this plugin wich uses '&lt;!--base64--&gt;' and '&lt;!--/base64--&gt;' tags. Do I have to edit all posts and change that tags to the new ones? =
 
-This plugin has retro-compatibility, this means that you don't have to change that old tags, they will work too.
+This plugin has retro-compatibility, this means that you don't have to change that old tags, they will work too. But if you wish you can update the database replacing the old tag format to the new tag format with just one click.
 
 = Why you don't provide a Visual editor quicktag button for the plugin? =
 
@@ -55,3 +55,5 @@ Most parts of the code are not my creation, they were borrowed from people smart
 Thanks to [Random Snippets](http://www.randomsnippets.com/2008/03/07/how-to-find-and-replace-text-dynamically-via-javascript/) for the Javascript replacement script. Without it the plugin will be unable to replace text inline.
 
 Thanks to [aNieto2k's AntiTroll Plugin](http://www.anieto2k.com/2006/02/08/plugin-antitroll/) for part of the code, because that was my first source when I knew nothing about creating a Wordpress Plugin.
+
+Thanks to [Lorelle's Blog](http://lorelle.wordpress.com/2005/12/01/search-and-replace-in-wordpress-mysql-da tabase/) for giving me the clue on how to search and replace inside a Wordpress database.
