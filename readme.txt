@@ -28,13 +28,13 @@ Previous versions of this plugin used `<!--base64-->` and `<!--/base64-->` tags.
 
 == Frequently Asked Questions ==
 
-= Can I include html tags inside '<base64>' and '</base64>' tags? =
+= Can I include html tags inside '&lt;base64&gt;' and '&lt;/base64&gt;' tags? =
 
 Yes, you can include html tags, they will be encrypted too. Just don't use double quotes, use single quotes if needed.
 
 For example, if you plan to include `<a href="http://www.wordpress.org">Wordpress</a>` you have to type it with single quotes like this `<a href='http://www.wordpress.org'>Wordpress</a>`. I don't know why double quotes doesn't work, but sinle ones do the job.
 
-= I'm using an older version of this plugin wich uses '<!--base64-->' and '<!--/base64-->' tags. Do I have to edit all posts and change that tags to the new ones? =
+= I'm using an older version of this plugin wich uses '&lt;!--base64--&gt;' and '&lt;!--/base64--&gt;' tags. Do I have to edit all posts and change that tags to the new ones? =
 
 This plugin has retro-compatibility, this means that you don't have to change that old tags, they will work too.
 
@@ -48,8 +48,7 @@ I thought you wouldn't ask. You can send me some bucks via PayPal, even USD$1 it
 
 == Screenshots ==
 
-![Base64 Plugin Screenshot](/tags/0.6/plugin-base64.jpg)
-Base64 screenshot showing how the tag works in editor mode and how it's seen when reading it.
+1. Base64 screenshot showing how the tag works in editor mode and how it's seen when reading it.
 
 == Credits ==
 
