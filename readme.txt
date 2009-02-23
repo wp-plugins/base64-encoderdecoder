@@ -20,11 +20,13 @@ Previous versions of this plugin used `<!--base64-->` and `<!--/base64-->` tags.
 
 == Installation ==
 
-1. Install `wp-base64.zip` to `/wp-content/plugins/` directory right from Wordpress Plugin Directory or unzip `wp-base64.zip` and upload the entire `wp-base64` folder to `/wp-content/plugins/` directory.
+1. Install `base64-encoderdecoder.0.6.zip` to `/wp-content/plugins/` directory right from Wordpress Plugin Directory or unzip `base64-encoderdecoder.0.6.zip` and upload the entire `base64-encoderdecoder` folder to `/wp-content/plugins/` directory.
 
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 
 1. Enclose the text you need to encrypt on your post inside `<base64>` and `</base64>` tags.
+
+1. Be sure to use the HTML Editor, because Rich Text Editor deletes all html-like tags that are not standard html tags. I will solve this in the next version.
 
 == Frequently Asked Questions ==
 
@@ -42,13 +44,19 @@ This plugin has retro-compatibility, this means that you don't have to change th
 
 That's because I haven't learned yet how to add it, but I'm working on that.
 
+= When I switch from HTML Editor to Rich Text Editor and back again to HTML Editor, Base64 tags are deleted automatically. Why is this? =
+
+Rich Text Editor deletes all html-like tags that are not standard html tags. It will be solved when the Visual quicktag button is implemented.
+
 = I think your plugin is great. How can I thank you besides rating it? =
 
 I thought you wouldn't ask. You can send me some bucks via PayPal, even USD$1 it's OK.
 
 == Screenshots ==
 
-1. Base64 screenshot showing how the tag works in editor mode and how it's seen when reading it.
+1. This screenshot shows Base64 tags enclosing the part of the post you want to encrypt.
+
+1. This screenshot shows how the encrypted text is shown inside the post, with the `Decode` button at the end of the encrypted text block.
 
 == Credits ==
 
