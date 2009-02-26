@@ -37,8 +37,12 @@ Version History:
 Credits:
 
 Most parts of the code are not my creation, they were borrowed from people smarter than me, so I must thank to them.
-Thanks to Random Snippets for the Javascript replacement script (http://www.randomsnippets.com/2008/03/07/how-to-find-and-replace-text-dynamically-via-javascript/)
-Thanks to aNieto2k's AntiTroll Plugin for part of the code, because that was my first source when I knew nothing about creating a Wordpress Plugin (http://www.anieto2k.com/2006/02/08/plugin-antitroll/)	
+
+Thanks to aNieto2k's AntiTroll Plugin for part of the code, because that was my first source when I knew nothing about creating a Wordpress Plugin. (http://www.anieto2k.com/2006/02/08/plugin-antitroll/)
+
+Thanks to Random Snippets for the Javascript replacement script. (http://www.randomsnippets.com/2008/03/07/how-to-find-and-replace-text-dynamically-via-javascript/)
+
+Thanks to Lorelle's Blog for the info on how to search and replace inside a Wordpress database. (http://lorelle.wordpress.com/2005/12/01/search-and-replace-in-wordpress-mysql-database/)
 
 License:
 
