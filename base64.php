@@ -3,13 +3,15 @@
 Plugin Name: WP-Base64 Encoder/Decoder
 Plugin URI: http://www.mrandersonmd.com/wordpress-plugins/base64-encoderdecoder-plugin-for-wordpress/
 Description: Plugin for Base64 Encoding/Decoding into Wordpress
-Version: 0.7
+Version: 0.71
 Author: Edison Montes M.
 Author URI: http://www.mrandersonmd.com
 License: GPL
 
 Version History:
 
+0.71 (25 Feb 2009)
+	* Fixed a bug related to multiple base64 blocks showing on different posts at the same time
 0.7 (03 Feb 2009)
 	* Database update function from old tags to new ones
 0.61 (02 Feb 2009)
@@ -37,12 +39,18 @@ Version History:
 Credits:
 
 Most parts of the code are not my creation, they were borrowed from people smarter than me, so I must thank to them.
-Thanks to Random Snippets for the Javascript replacement script (http://www.randomsnippets.com/2008/03/07/how-to-find-and-replace-text-dynamically-via-javascript/)
-Thanks to aNieto2k's AntiTroll Plugin for part of the code, because that was my first source when I knew nothing about creating a Wordpress Plugin (http://www.anieto2k.com/2006/02/08/plugin-antitroll/)	
+
+Thanks to aNieto2k's AntiTroll Plugin for part of the code, because that was my first source when I knew nothing about creating a Wordpress Plugin. (http://www.anieto2k.com/2006/02/08/plugin-antitroll/)
+
+Thanks to Random Snippets for the Javascript replacement script. (http://www.randomsnippets.com/2008/03/07/how-to-find-and-replace-text-dynamically-via-javascript/)
+
+Thanks to Lorelle's Blog for the info on how to search and replace inside a Wordpress database. (http://lorelle.wordpress.com/2005/12/01/search-and-replace-in-wordpress-mysql-database/)
+
+Thanks to MyDigitalLife for the info on how to identify the postID, helping me to solve the bug related to multiple base64 blocks showing on different posts at same time. (http://www.mydigitallife.info/2006/06/24/retrieve-and-get-wordpress-post-id-outside-the-loop-as-php-variable/)
 
 License:
 
-    Copyright 2006  Edison Montes M.  (email : webmaster@mrandersonmd.com)
+    Copyright 2006-2009  Edison Montes M.  (email : webmaster@mrandersonmd.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -157,12 +165,14 @@ function wp_b64_encode($string_to_encode, $i) {
 
 // Gives html format to the encoded text block
 function wp_b64_html($encoded_data, $i) {
+  global $wp_query;
+  $thePostID = $wp_query->post->ID;
   $wp_b64_wordwrap = get_option('wp_b64_wordwrap');
   $wp_b64_format = get_option('wp_b64_format');
   $wp_b64_button = get_option('wp_b64_button');
   $bq_formatted = wordwrap($encoded_data, $wp_b64_wordwrap, "<br />\n", 1);
   $decoded_data = wp_b64_format_post(utf8_decode(base64_decode($encoded_data)));
-  $retval = "<div id='b64block" . $i . "'>";
+  $retval = "<div id='b64block-" . $thePostID . "-" . $i . "'>";
   if ($wp_b64_format=='bq') {
     $retval .= "<blockquote><p>" . $bq_formatted . "</p></blockquote>";
   } elseif ($wp_b64_format=='cd') {
@@ -170,8 +180,8 @@ function wp_b64_html($encoded_data, $i) {
   } else {
     $retval .= "<p>" . $bq_formatted . "</p>";
   }
-  $retval .= '<br /><input type="hidden" id="decstring' . $i . '" name="decstring' . $i . '" value="' . $decoded_data . '" />';
-  $retval .= '<input type="button" value="' . $wp_b64_button . '" name="send" onClick="javascript:replaceb64Text(\'b64block' . $i . '\', \'decstring' . $i . '\');"></div>';
+  $retval .= '<br /><input type="hidden" id="decstring-' . $thePostID . '-' . $i . '" name="decstring-' . $thePostID . '-' . $i . '" value="' . $decoded_data . '" />';
+  $retval .= '<input type="button" value="' . $wp_b64_button . '" name="send" onClick="javascript:replaceb64Text(\'b64block-' . $thePostID . '-' . $i . '\', \'decstring-' . $thePostID . '-' . $i . '\');"></div>';
 
   return $retval;
 }

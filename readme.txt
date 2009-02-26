@@ -3,8 +3,8 @@ Contributors: mranderson
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2920389
 Tags: comments, tag, encoder, decoder, base64
 Requires at least: 2.1
-Tested up to: 2.7
-Stable tag: 0.7
+Tested up to: 2.7.1
+Stable tag: 0.71
 
 Enables you to encode parts of your post in base64.
 
@@ -20,7 +20,7 @@ Previous versions of this plugin used `<!--base64-->` and `<!--/base64-->` tags.
 
 == Installation ==
 
-1. Install `base64-encoderdecoder.0.7.zip` to `/wp-content/plugins/` directory right from Wordpress Plugin Directory or unzip `base64-encoderdecoder.0.7.zip` and upload the entire `base64-encoderdecoder` folder to `/wp-content/plugins/` directory.
+1. Install `base64-encoderdecoder.0.71.zip` to `/wp-content/plugins/` directory right from Wordpress Plugin Directory or unzip `base64-encoderdecoder.0.71.zip` and upload the entire `base64-encoderdecoder` folder to `/wp-content/plugins/` directory.
 
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 
@@ -60,8 +60,11 @@ I thought you wouldn't ask. You can send me some bucks via PayPal, even USD$1 it
 
 Most parts of the code are not my creation, they were borrowed from people smarter than me, so I must thank to them.
 
-Thanks to [Random Snippets](http://www.randomsnippets.com/2008/03/07/how-to-find-and-replace-text-dynamically-via-javascript/) for the Javascript replacement script. Without it the plugin will be unable to replace text inline.
-
 Thanks to [aNieto2k's AntiTroll Plugin](http://www.anieto2k.com/2006/02/08/plugin-antitroll/) for part of the code, because that was my first source when I knew nothing about creating a Wordpress Plugin.
 
-Thanks to [Lorelle's Blog](http://lorelle.wordpress.com/2005/12/01/search-and-replace-in-wordpress-mysql-da tabase/) for giving me the clue on how to search and replace inside a Wordpress database.
+Thanks to [Random Snippets](http://www.randomsnippets.com/2008/03/07/how-to-find-and-replace-text-dynamically-via-javascript/) for the Javascript replacement script. Without it the plugin will be unable to replace text inline.
+
+Thanks to [Lorelle's Blog](http://lorelle.wordpress.com/2005/12/01/search-and-replace-in-wordpress-mysql-da tabase/) for the info on how to search and replace inside a Wordpress database.
+
+Thanks to [MyDigitalLife](http://www.mydigitallife.info/2006/06/24/retrieve-and-get-wordpress-post-id-outside-the-loop-as-php-variable/) for the info on how to identify the postID, helping me to solve the bug related to multiple base64 blocks showing on different posts at same time.
+
