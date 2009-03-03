@@ -4,13 +4,13 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: comments, tag, encoder, decoder, base64
 Requires at least: 2.1
 Tested up to: 2.7.1
-Stable tag: 0.71
+Stable tag: 0.8
 
 Enables you to encode parts of your post in base64.
 
 == Description ==
 
-WP-Base64 Encoder/Decoder is a Wordpress Plugin that enables you to encode parts of your post in base64. The encoded text looks like unreadable text, but when you press the "Decode" button it gets readable with inline replacement.
+WP-Base64 Encoder/Decoder is a Wordpress Plugin that enables you to encode parts of your post in base64. The encoded text looks like unreadable text, but when you press the "Decode" button it gets readable with inline replacement using AJAX, so it's invisible to search robots.
 
 It uses html-styled `<base64>` and `</base64>` tags for opening and closing the parts of post you need to encode. The tags are browser invisible, this is, if you decide to deactivate the plugin, the content enclosed by this tags will be shown like normal text in the post.
 
@@ -20,7 +20,7 @@ Previous versions of this plugin used `<!--base64-->` and `<!--/base64-->` tags.
 
 == Installation ==
 
-1. Install `base64-encoderdecoder.0.71.zip` to `/wp-content/plugins/` directory right from Wordpress Plugin Directory or unzip `base64-encoderdecoder.0.71.zip` and upload the entire `base64-encoderdecoder` folder to `/wp-content/plugins/` directory.
+1. Install `base64-encoderdecoder.0.8.zip` to `/wp-content/plugins/` directory right from Wordpress Plugin Directory or unzip `base64-encoderdecoder.0.8.zip` and upload the entire `base64-encoderdecoder` folder to `/wp-content/plugins/` directory.
 
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 
@@ -68,3 +68,4 @@ Thanks to [Lorelle's Blog](http://lorelle.wordpress.com/2005/12/01/search-and-re
 
 Thanks to [MyDigitalLife](http://www.mydigitallife.info/2006/06/24/retrieve-and-get-wordpress-post-id-outside-the-loop-as-php-variable/) for the info on how to identify the postID, helping me to solve the bug related to multiple base64 blocks showing on different posts at same time.
 
+Thanks to [Daniel Lorch](http://daniel.lorch.cc/docs/ajax_simple/) for the info on how to use AJAX inside the plugin, it was a clarificating example.
