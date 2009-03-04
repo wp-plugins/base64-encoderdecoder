@@ -20,7 +20,7 @@ Previous versions of this plugin used `<!--base64-->` and `<!--/base64-->` tags.
 
 == Installation ==
 
-1. Install `base64-encoderdecoder.0.71.zip` to `/wp-content/plugins/` directory right from Wordpress Plugin Directory or unzip `base64-encoderdecoder.0.71.zip` and upload the entire `base64-encoderdecoder` folder to `/wp-content/plugins/` directory.
+1. Install `base64-encoderdecoder.0.7.1.zip` to `/wp-content/plugins/` directory right from Wordpress Plugin Directory or unzip `base64-encoderdecoder.0.7.1.zip` and upload the entire `base64-encoderdecoder` folder to `/wp-content/plugins/` directory.
 
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 
