@@ -3,18 +3,18 @@
 Plugin Name: WP-Base64 Encoder/Decoder
 Plugin URI: http://www.mrandersonmd.com/wordpress-plugins/base64-encoderdecoder-plugin-for-wordpress/
 Description: Plugin for Base64 Encoding/Decoding into Wordpress
-Version: 0.71
+Version: 0.7.1
 Author: Edison Montes M.
 Author URI: http://www.mrandersonmd.com
 License: GPL
 
 Version History:
 
-0.71 (25 Feb 2009)
+0.7.1 (25 Feb 2009)
 	* Fixed a bug related to multiple base64 blocks showing on different posts at the same time
 0.7 (03 Feb 2009)
 	* Database update function from old tags to new ones
-0.61 (02 Feb 2009)
+0.6.1 (02 Feb 2009)
 	* Fixed some bugs related to double quotes inside a base64 block
 	* Deleted redundant and unnecesary code
 0.6 (30 Jan 2009)
@@ -22,7 +22,7 @@ Version History:
 	* Removed post title variable because of inline replacement
 	* New tag format html-styled with retro-compatibility
 	* Revamped configuration page
-0.42 (16 Jul 2007)
+0.4.2 (16 Jul 2007)
 	* Minor quicktag bug fixed
 0.4 (13 Nov 2006)
 	* Added checking for new versions

@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: comments, tag, encoder, decoder, base64
 Requires at least: 2.1
 Tested up to: 2.7.1
-Stable tag: 0.71
+Stable tag: 0.7.1
 
 Enables you to encode parts of your post in base64.
 
