@@ -265,7 +265,7 @@ if(navigator.appName == \"Microsoft Internet Explorer\") {
 
 function replaceb64Text(b64block, encstring) {
   http.abort();
-  http.open(\"GET\", \"wp-content/plugins/base64-encoderdecoder/base64_decode.php?string=\" + encstring, true);
+  http.open(\"GET\", \"" . $siteurl . "/wp-content/plugins/base64-encoderdecoder/base64_decode.php?string=\" + encstring, true);
   http.onreadystatechange=function() {
     if(http.readyState == 4) {
       document.getElementById(b64block).innerHTML = http.responseText;
