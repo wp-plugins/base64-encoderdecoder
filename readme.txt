@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: comments, tag, encoder, decoder, base64
 Requires at least: 2.1
 Tested up to: 2.7.1
-Stable tag: 0.8
+Stable tag: 0.8.2
 
 Enables you to encode parts of your post in base64.
 
@@ -20,7 +20,7 @@ Previous versions of this plugin used `<!--base64-->` and `<!--/base64-->` tags.
 
 == Installation ==
 
-1. Install `base64-encoderdecoder.0.8.zip` to `/wp-content/plugins/` directory right from Wordpress Plugin Directory or unzip `base64-encoderdecoder.0.8.zip` and upload the entire `base64-encoderdecoder` folder to `/wp-content/plugins/` directory.
+1. Install `base64-encoderdecoder.0.8.2.zip` to `/wp-content/plugins/` directory right from Wordpress Plugin Directory or unzip `base64-encoderdecoder.0.8.2.zip` and upload the entire `base64-encoderdecoder` folder to `/wp-content/plugins/` directory.
 
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 
@@ -69,3 +69,40 @@ Thanks to [Lorelle's Blog](http://lorelle.wordpress.com/2005/12/01/search-and-re
 Thanks to [MyDigitalLife](http://www.mydigitallife.info/2006/06/24/retrieve-and-get-wordpress-post-id-outside-the-loop-as-php-variable/) for the info on how to identify the postID, helping me to solve the bug related to multiple base64 blocks showing on different posts at same time.
 
 Thanks to [Daniel Lorch](http://daniel.lorch.cc/docs/ajax_simple/) for the info on how to use AJAX inside the plugin, it was a clarificating example.
+
+Thanks to [Automatic Timezone Plugin](http://wordpress.org/extend/plugins/automatic-timezone/) for parts of script that adds "Settings" link to Admin Page in Installed Plugins Page.
+
+Thanks to [Famfamfam](http://www.famfamfam.com/lab/icons/silk/) for the key icon used for the Admin page.
+
+== Version History ==
+
++ 0.8.2 (13 Mar 2009)
+	* Minor bug related to remote version check fixed
+	* Optimization of minor parts of the code
++ 0.8 (02 Mar 2009)
+	* Added AJAX inline text replacement
++ 0.7.1 (25 Feb 2009)
+	* Fixed a bug related to multiple base64 blocks showing on different posts at the same time
++ 0.7 (03 Feb 2009)
+	* Database update function from old tags to new ones
++ 0.6.1 (02 Feb 2009)
+	* Fixed some bugs related to double quotes inside a base64 block
+	* Deleted redundant and unnecesary code
++ 0.6 (30 Jan 2009)
+	* Inline replacement, no need for different flavors
+	* Removed post title variable because of inline replacement
+	* New tag format html-styled with retro-compatibility
+	* Revamped configuration page
++ 0.4.2 (16 Jul 2007)
+	* Minor quicktag bug fixed
++ 0.4 (13 Nov 2006)
+	* Added checking for new versions
+	* Added Quicktags button and configurable activation/deactivation
++ 0.3 (26 Oct 2006)
+	* Added options screen
+	* Configurable wordwrap, text block html formatting, new post title and submit button text
++ 0.2 (23 Oct 2006)
+	* Multiple base64 encoded blocks
+	* Optimized checking for paired tag formatting
++ 0.1 (21 Oct 2006)
+	* First release, just functional

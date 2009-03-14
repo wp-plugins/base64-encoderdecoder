@@ -1,15 +1,18 @@
 <?php
 /*
-Plugin Name: WP-Base64 Encoder/Decoder
+Plugin Name: Base64 Encoder/Decoder
 Plugin URI: http://www.mrandersonmd.com/wordpress-plugins/base64-encoderdecoder-plugin-for-wordpress/
 Description: Plugin for Base64 Encoding/Decoding into Wordpress
-Version: 0.8
+Version: 0.8.2
 Author: Edison Montes M.
 Author URI: http://www.mrandersonmd.com
 License: GPL
 
 Version History:
 
+0.8.2 (13 Mar 2009)
+	* Minor bug related to remote version check fixed
+	* Optimization of minor parts of the code
 0.8 (02 Mar 2009)
 	* Added AJAX inline text replacement
 0.7.1 (25 Feb 2009)
@@ -52,6 +55,10 @@ Thanks to MyDigitalLife for the info on how to identify the postID, helping me t
 
 Thanks to Daniel Lorch for the info on how to use AJAX inside the plugin, it was a clarificating example. (http://daniel.lorch.cc/docs/ajax_simple/)
 
+Thanks to Automatic Timezone Plugin for parts of script that adds "Settings" link to Admin Page in Installed Plugins Page. (http://wordpress.org/extend/plugins/automatic-timezone/)
+
+Thanks to Famfamfam for the key icon used for the Admin page. (http://www.famfamfam.com/lab/icons/silk/)
+
 License:
 
     Copyright 2006-2009  Edison Montes M.  (email : webmaster@mrandersonmd.com)
@@ -79,9 +86,40 @@ wp_b64_variables();
 wp_b64_init();
 
 add_filter('the_content','wp_b64_tag');
-add_action('admin_menu','wp_b64_admin_page');
-add_filter('admin_footer', 'wp_b64_add_js');
 add_action('wp_head','wp_b64_add_header');
+add_filter('admin_footer', 'wp_b64_add_js');
+add_action('admin_menu','wp_b64_admin_page');
+
+// Define variables
+function wp_b64_variables(){
+define('wp_b64_wordwrap_default', '55', true);
+define('wp_b64_format_default', 'bq', true);
+define('wp_b64_button_default', 'Decode', true);
+define('wp_b64_button_option_default', 'on', true);
+
+define('wp_b64_wordwrap', 'wp_b64_wordwrap', true);
+define('wp_b64_format', 'wp_b64_format', true);
+define('wp_b64_button', 'wp_b64_button', true);
+define('wp_b64_button_option', 'wp_b64_button_option', true);
+
+$wp_b64_wordwrap;
+$wp_b64_format;
+$wp_b64_button;
+$wp_b64_button_option;
+}
+
+// Initiates all variables
+function wp_b64_init() {
+  $wp_b64_wordwrap = get_option(wp_b64_wordwrap);
+  if (!$wp_b64_wordwrap) {
+    add_option(wp_b64_wordwrap, wp_b64_wordwrap_default);
+    add_option(wp_b64_format, wp_b64_format_default);
+    add_option(wp_b64_button, wp_b64_button_default);
+    add_option(wp_b64_title, wp_b64_title_default);
+    add_option(wp_b64_button_option, wp_b64_button_option_default);
+  }
+  $wp_b64_wordwrap = get_option(wp_b64_wordwrap);
+}
 
 // Main function
 function wp_b64_tag($content) {
@@ -130,34 +168,6 @@ function wp_b64_tag($content) {
   }
 }
 
-// Information function
-function wp_b64_info($show = '') {
-  switch($show) {
-    case 'localeversion':
-      $info = '0.64';
-      break;
-    case 'homeurl':
-      $info = 'http://www.mrandersonmd.com/wordpress-plugins/base64-encoderdecoder-plugin-for-wordpress/';
-      break;
-	 case 'downloadurl':
-	 	$info = 'http://www.mrandersonmd.com/files/plugins/base64-encoderdecoder.';
-	 	break;
-    case 'homename':
-      $info = 'MrAnderson MD';
-      break;
-    case 'remoteversionfile':
-      $info = 'http://www.mrandersonmd.com/files/plugins/wp-base64-version.txt';
-      break;
-	 case 'remoteversion':
-	   $info = b64_remote_version();
-	   break;
-    default:
-      $info = '';
-      break;
-    }
-  return $info;
-}
-
 // Encodes part of the post
 function wp_b64_encode($string_to_encode, $i) {
   $encoded_data = base64_encode(htmlentities($string_to_encode, ENT_QUOTES));
@@ -186,70 +196,6 @@ function wp_b64_html($encoded_data, $i) {
   return $retval;
 }
 
-// Gives html format to decoded page
-function wp_b64_format_post($decoded_data) {
-  $retval = "<p>";
-  $retval .= str_replace("\n", "</p><p>", $decoded_data);
-  $retval .= "</p>";
-  return $retval;
-}
-
-// Define variables
-function wp_b64_variables(){
-define('wp_b64_wordwrap_default', '55', true);
-define('wp_b64_format_default', 'bq', true);
-define('wp_b64_button_default', 'Decode', true);
-define('wp_b64_button_option_default', 'on', true);
-
-define('wp_b64_wordwrap', 'wp_b64_wordwrap', true);
-define('wp_b64_format', 'wp_b64_format', true);
-define('wp_b64_button', 'wp_b64_button', true);
-define('wp_b64_button_option', 'wp_b64_button_option', true);
-
-$wp_b64_wordwrap;
-$wp_b64_format;
-$wp_b64_button;
-$wp_b64_button_option;
-}
-
-// Initiates all variables
-function wp_b64_init() {
-  $wp_b64_wordwrap = get_option(wp_b64_wordwrap);
-  if (!$wp_b64_wordwrap) {
-    add_option(wp_b64_wordwrap, wp_b64_wordwrap_default);
-    add_option(wp_b64_format, wp_b64_format_default);
-    add_option(wp_b64_button, wp_b64_button_default);
-    add_option(wp_b64_title, wp_b64_title_default);
-    add_option(wp_b64_button_option, wp_b64_button_option_default);
-  }
-  $wp_b64_wordwrap = get_option(wp_b64_wordwrap);
-}
-
-// Checks for new versions
-function b64_remote_version() {
-  if (class_exists(snoopy)) {
-  	$client = new Snoopy();
-  	$client->_fp_timeout = 4;
-  	if ($client->fetch(wp_b64_info('remoteversionfile')) === false ) {
-		return -1;
-	}
-	$remote = $client->results;
-	return $remote;
-	}
-}
-
-function b64_remote_version_check() {  
-  	$remote = wp_b64_info('remoteversion');
-  	if (!$remote || strlen($remote) > 8 ) {
-  		return -1;
-  	}
-  	if (intval($remote) > intval(wp_b64_info('localeversion'))) {
-  		return 1;
-  	} else {
-	  return 0;
-	}
-}
-
 // Adds Javascript to the header
 function wp_b64_add_header() {
   echo "\n<!-- Start of script generated by WP-Base64 Plugin -->\n";
@@ -265,7 +211,7 @@ if(navigator.appName == \"Microsoft Internet Explorer\") {
 
 function replaceb64Text(b64block, encstring) {
   http.abort();
-  http.open(\"GET\", \"wp-content/plugins/base64-encoderdecoder/base64_decode.php?string=\" + encstring, true);
+  http.open(\"GET\", \"" . WP_PLUGIN_URL . "/" . plugin_basename(dirname(__FILE__) ) . "/base64_decode.php?string=\" + encstring, true);
   http.onreadystatechange=function() {
     if(http.readyState == 4) {
       document.getElementById(b64block).innerHTML = http.responseText;
@@ -314,28 +260,20 @@ function wp_b64_add_js() {
   }
 }
 
-// Old tag format Database check
-function wp_b64_old_tag_check() {
-	global $wpdb;
-	$search = $wpdb->get_results("SELECT * FROM wp_posts WHERE post_content LIKE '%<!--base64-->%' ORDER BY post_content", OBJECT);
-	$results = count($search);
-	if ($results > 0) {
-		return 1;
-	} else {
-		return 0;
-	}
-}
-
-// Update Database function
-function wp_b64_update_db() {
-	global $wpdb;
-	$wpdb->query("UPDATE wp_posts SET post_content = REPLACE (post_content,'<!--base64-->','<base64>')");
-	$wpdb->query("UPDATE wp_posts SET post_content = REPLACE (post_content,'<!--/base64-->','</base64>')");
-}
-
-// Adds options page
+// Adds Admin page
 function wp_b64_admin_page() {
-  add_options_page('Base64 Enc/Dec', 'Base64 Enc/Dec', 9, __FILE__, 'wp_b64_config');
+	global $wp_version;
+	if ( current_user_can('manage_options') && function_exists('add_options_page') ) {
+	
+		$menutitle = '';
+		if ( version_compare( $wp_version, '2.6.999', '>' ) ) {
+	  		$menutitle = '<img src="'.plugins_url(dirname(plugin_basename(__FILE__))).'/key.png" style="margin-right:4px;" />';
+		}
+
+		$menutitle .= 'Base64 Enc/Dec';
+		add_options_page('Base64 Enc/Dec Configuration', $menutitle , 'manage_options', 'wp-b64-config', 'wp_b64_config');
+		add_filter( 'plugin_action_links', 'wp_b64_filter_plugin_actions', 10, 2 );
+	}
 }
 
 // Options page
@@ -407,6 +345,87 @@ function wp_b64_config() {
     </form>
   </div>
   <?php
+}
+
+function b64_remote_version_check() {  
+  	$remote = wp_b64_info('remoteversion');
+  	if (!$remote) {
+  		return -1;
+  	} else {
+	  	return version_compare($remote, wp_b64_info('localeversion'));
+	}
+}
+
+// Information function
+function wp_b64_info($show = '') {
+  switch($show) {
+    case 'localeversion':
+      $info = '0.8.2';
+      break;
+    case 'homeurl':
+      $info = 'http://www.mrandersonmd.com/wordpress-plugins/base64-encoderdecoder-plugin-for-wordpress/';
+      break;
+	 case 'downloadurl':
+	 	$info = 'http://www.mrandersonmd.com/files/plugins/base64-encoderdecoder.';
+	 	break;
+    case 'homename':
+      $info = 'MrAnderson MD';
+      break;
+    case 'remoteversionfile':
+      $info = 'http://www.mrandersonmd.com/files/plugins/wp-base64-version.txt';
+      break;
+	 case 'remoteversion':
+	   $info = b64_remote_version();
+	   break;
+    default:
+      $info = '';
+      break;
+    }
+  return $info;
+}
+
+// Checks for new versions
+function b64_remote_version() {
+  if (class_exists(snoopy)) {
+  	$client = new Snoopy();
+  	$client->_fp_timeout = 4;
+  	if ($client->fetch(wp_b64_info('remoteversionfile')) === false ) {
+		return -1;
+	}
+	$remote = $client->results;
+	return $remote;
+	}
+}
+
+// Old tag format Database check
+function wp_b64_old_tag_check() {
+	global $wpdb;
+	$search = $wpdb->get_results("SELECT * FROM wp_posts WHERE post_content LIKE '%<!--base64-->%' ORDER BY post_content", OBJECT);
+	$results = count($search);
+	if ($results > 0) {
+		return 1;
+	} else {
+		return 0;
+	}
+}
+
+// Update Database function
+function wp_b64_update_db() {
+	global $wpdb;
+	$wpdb->query("UPDATE wp_posts SET post_content = REPLACE (post_content,'<!--base64-->','<base64>')");
+	$wpdb->query("UPDATE wp_posts SET post_content = REPLACE (post_content,'<!--/base64-->','</base64>')");
+}
+
+function wp_b64_filter_plugin_actions($links, $file){
+	static $this_plugin;
+
+	if( !$this_plugin ) $this_plugin = plugin_basename(__FILE__);
+
+	if( $file == $this_plugin ) {
+		$settings_link = '<a href="admin.php?page=wp-b64-config">' . __('Settings') . '</a>';
+		$links = array_merge( array($settings_link), $links); // before other links
+	}
+	return $links;
 }
 
 ?>
