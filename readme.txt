@@ -18,6 +18,49 @@ You can add the tags typing them or using the quicktag button in HTML editing mo
 
 Previous versions of this plugin used `<!--base64-->` and `<!--/base64-->` tags. You don't have to modify that posts, the new tag format has retro-compatibility. But if you wish you can update the database replacing the old tag format to the new tag format with just one click.
 
+== Changelog ==
+
+= 0.8.2 =
+* Minor bug related to remote version check fixed
+* Optimization of minor parts of the code
+
+= 0.8 =
+* Added AJAX inline text replacement
+
+= 0.7.1 =
+* Fixed a bug related to multiple base64 blocks showing on different posts at the same time
+
+= 0.7 =
+* Database update function from old tags to new ones
+
+= 0.6.1 =
+* Fixed some bugs related to double quotes inside a base64 block
+* Deleted redundant and unnecesary code
+
+= 0.6 =
+* Inline replacement, no need for different flavors
+* Removed post title variable because of inline replacement
+* New tag format html-styled with retro-compatibility
+* Revamped configuration page
+
+= 0.4.2 =
+* Minor quicktag bug fixed
+
+= 0.4 =
+* Added checking for new versions
+* Added Quicktags button and configurable activation/deactivation
+
+= 0.3 =
+* Added options screen
+* Configurable wordwrap, text block html formatting, new post title and submit button text
+
+= 0.2 =
+* Multiple base64 encoded blocks
+* Optimized checking for paired tag formatting
+
+= 0.1 =
+* First release, just functional
+
 == Installation ==
 
 1. Install `base64-encoderdecoder.0.8.2.zip` to `/wp-content/plugins/` directory right from Wordpress Plugin Directory or unzip `base64-encoderdecoder.0.8.2.zip` and upload the entire `base64-encoderdecoder` folder to `/wp-content/plugins/` directory.
@@ -73,36 +116,3 @@ Thanks to [Daniel Lorch](http://daniel.lorch.cc/docs/ajax_simple/) for the info 
 Thanks to [Automatic Timezone Plugin](http://wordpress.org/extend/plugins/automatic-timezone/) for parts of script that adds "Settings" link to Admin Page in Installed Plugins Page.
 
 Thanks to [Famfamfam](http://www.famfamfam.com/lab/icons/silk/) for the key icon used for the Admin page.
-
-== Version History ==
-
-+ 0.8.2 (13 Mar 2009)
-	* Minor bug related to remote version check fixed
-	* Optimization of minor parts of the code
-+ 0.8 (02 Mar 2009)
-	* Added AJAX inline text replacement
-+ 0.7.1 (25 Feb 2009)
-	* Fixed a bug related to multiple base64 blocks showing on different posts at the same time
-+ 0.7 (03 Feb 2009)
-	* Database update function from old tags to new ones
-+ 0.6.1 (02 Feb 2009)
-	* Fixed some bugs related to double quotes inside a base64 block
-	* Deleted redundant and unnecesary code
-+ 0.6 (30 Jan 2009)
-	* Inline replacement, no need for different flavors
-	* Removed post title variable because of inline replacement
-	* New tag format html-styled with retro-compatibility
-	* Revamped configuration page
-+ 0.4.2 (16 Jul 2007)
-	* Minor quicktag bug fixed
-+ 0.4 (13 Nov 2006)
-	* Added checking for new versions
-	* Added Quicktags button and configurable activation/deactivation
-+ 0.3 (26 Oct 2006)
-	* Added options screen
-	* Configurable wordwrap, text block html formatting, new post title and submit button text
-+ 0.2 (23 Oct 2006)
-	* Multiple base64 encoded blocks
-	* Optimized checking for paired tag formatting
-+ 0.1 (21 Oct 2006)
-	* First release, just functional
