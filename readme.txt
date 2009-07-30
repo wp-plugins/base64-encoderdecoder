@@ -2,7 +2,7 @@
 Contributors: mranderson
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2920389
 Tags: comments, tag, encoder, decoder, base64
-Requires at least: 2.1
+Requires at least: 2.0.5
 Tested up to: 2.7.1
 Stable tag: 0.8.2
 
@@ -17,6 +17,49 @@ It uses html-styled `<base64>` and `</base64>` tags for opening and closing the 
 You can add the tags typing them or using the quicktag button in HTML editing mode. For now I don't provide a quicktag button in Visual editing mode, but I expect to add that in next version.
 
 Previous versions of this plugin used `<!--base64-->` and `<!--/base64-->` tags. You don't have to modify that posts, the new tag format has retro-compatibility. But if you wish you can update the database replacing the old tag format to the new tag format with just one click.
+
+== Changelog ==
+
+= 0.8.2 =
+* Minor bug related to remote version check fixed
+* Optimization of minor parts of the code
+
+= 0.8 =
+* Added AJAX inline text replacement
+
+= 0.7.1 =
+* Fixed a bug related to multiple base64 blocks showing on different posts at the same time
+
+= 0.7 =
+* Database update function from old tags to new ones
+
+= 0.6.1 =
+* Fixed some bugs related to double quotes inside a base64 block
+* Deleted redundant and unnecesary code
+
+= 0.6 =
+* Inline replacement, no need for different flavors
+* Removed post title variable because of inline replacement
+* New tag format html-styled with retro-compatibility
+* Revamped configuration page
+
+= 0.4.2 =
+* Minor quicktag bug fixed
+
+= 0.4 =
+* Added checking for new versions
+* Added Quicktags button and configurable activation/deactivation
+
+= 0.3 =
+* Added options screen
+* Configurable wordwrap, text block html formatting, new post title and submit button text
+
+= 0.2 =
+* Multiple base64 encoded blocks
+* Optimized checking for paired tag formatting
+
+= 0.1 =
+* First release, just functional
 
 == Installation ==
 
