@@ -96,7 +96,7 @@ add_action('admin_menu','wp_b64_admin_page');
 function wp_b64_variables(){
 define('wp_b64_wordwrap_default', '55', true);
 define('wp_b64_format_default', 'bq', true);
-define('wp_b64_button_default', __('Decode'), true);
+define('wp_b64_button_default', __('Decode', 'base64-encoderdecoder'), true);
 define('wp_b64_button_option_default', 'on', true);
 
 define('wp_b64_wordwrap', 'wp_b64_wordwrap', true);
@@ -272,8 +272,8 @@ function wp_b64_admin_page() {
 	  		$menutitle = '<img src="'.plugins_url(dirname(plugin_basename(__FILE__))).'/key.png" style="margin-right:4px;" />';
 		}
 
-		$menutitle .= __('Base64 Enc/Dec');
-		add_options_page(__('Base64 Enc/Dec Configuration'), $menutitle , 'manage_options', 'wp-b64-config', 'wp_b64_config');
+		$menutitle .= __('Base64 Enc/Dec', 'base64-encoderdecoder');
+		add_options_page(__('Base64 Enc/Dec Configuration', 'base64-encoderdecoder'), $menutitle , 'manage_options', 'wp-b64-config', 'wp_b64_config');
 		add_filter( 'plugin_action_links', 'wp_b64_filter_plugin_actions', 10, 2 );
 	}
 }
@@ -285,92 +285,92 @@ function wp_b64_config() {
     update_option('wp_b64_format', $_POST['wp_b64_format']);
     update_option('wp_b64_button', $_POST['wp_b64_button']);
     update_option('wp_b64_button_option', $_POST['wp_b64_button_option']);
-    echo "<div style=\"background-color: rgb(207, 235, 247);\" id=\"message\" class=\"updated fade\"><p><strong>".__('Options Updated')."</strong></p></div>";
+    echo "<div style=\"background-color: rgb(207, 235, 247);\" id=\"message\" class=\"updated fade\"><p><strong>".__('Options Updated', 'base64-encoderdecoder')."</strong></p></div>";
   }
   if (isset($_POST['reset'])) {
     update_option('wp_b64_wordwrap', wp_b64_wordwrap_default);
     update_option('wp_b64_format', wp_b64_format_default);
     update_option('wp_b64_button', wp_b64_button_default);
     update_option('wp_b64_button_option', wp_b64_button_option_default);
-    echo "<div style=\"background-color: rgb(207, 235, 247);\" id=\"message\" class=\"updated fade\"><p><strong>".__('Options Reseted')."</strong></p></div>";
+    echo "<div style=\"background-color: rgb(207, 235, 247);\" id=\"message\" class=\"updated fade\"><p><strong>".__('Options Reseted', 'base64-encoderdecoder')."</strong></p></div>";
   }
   if (isset($_POST['updatedb'])) {
 	 wp_b64_update_db();
-    echo "<div style=\"background-color: rgb(207, 235, 247);\" id=\"message\" class=\"updated fade\"><p><strong>".__('Database updated to new tag format')."</strong></p></div>";
+    echo "<div style=\"background-color: rgb(207, 235, 247);\" id=\"message\" class=\"updated fade\"><p><strong>".__('Database updated to new tag format', 'base64-encoderdecoder')."</strong></p></div>";
   }
   if (($remote = b64_remote_version_check()) == 1) {
 	$b64_homeurl = wp_b64_info('homeurl');
 	$b64_homename = wp_b64_info('homename');
 	$b64_downloadurl = wp_b64_info('downloadurl') . wp_b64_info('remoteversion');
-  	printf("<div style=\"background-color: rgb(207, 235, 247);\" id=\"message\" class=\"updated fade\"><p>".__('There is a <strong><a href=\"%1$s\" title=\"%2$s\">NEW</a></strong> version available. You can download it <a href=\"%3$s.zip\">HERE</a>')."</p></div", $b64_homeurl, $b64_homename, $b64_downloadurl);
+  	printf("<div style=\"background-color: rgb(207, 235, 247);\" id=\"message\" class=\"updated fade\"><p>".__('There is a <strong><a href=\"%1$s\" title=\"%2$s\">NEW</a></strong> version available. You can download it <a href=\"%3$s.zip\">HERE</a>', 'base64-encoderdecoder')."</p></div", $b64_homeurl, $b64_homename, $b64_downloadurl);
   }
   $b64_format = get_option(wp_b64_format);
   $b64_button_option = get_option(wp_b64_button_option);
   ?>
   <div class="wrap">
 <?php
-echo "<h2>".__('Base64 Encoder/Decoder Options')."</h2>";
+echo "<h2>".__('Base64 Encoder/Decoder Options', 'base64-encoderdecoder')."</h2>";
 ?>
     <br />
     <form name="wp_b64_options" method="post">
 <?php
-echo "<h3>".__('Display Options')."</h3>";
+echo "<h3>".__('Display Options', 'base64-encoderdecoder')."</h3>";
 ?>
 	 <table class="form-table">
 	 <tr valign="top">
 <?php
-echo "<th scope=\"row\">".__('Button Text')."</th>";
-echo "<td><fieldset><legend class=\"hidden\">".__('Button Text')."</legend><label for=\"button_text\"><input name=\"" . wp_b64_button . "\" value=\"" . get_option(wp_b64_button) . "\" size=\"40\" class=\"code\" type=\"text\" /> ";
-echo __('Text of the submit button')."</label><br /></fieldset></td>";
+echo "<th scope=\"row\">".__('Button Text', 'base64-encoderdecoder')."</th>";
+echo "<td><fieldset><legend class=\"hidden\">".__('Button Text', 'base64-encoderdecoder')."</legend><label for=\"button_text\"><input name=\"" . wp_b64_button . "\" value=\"" . get_option(wp_b64_button) . "\" size=\"40\" class=\"code\" type=\"text\" /> ";
+echo __('Text of the submit button', 'base64-encoderdecoder')."</label><br /></fieldset></td>";
 ?>
     </tr><tr valign="top">
 <?php
-echo "<th scope=\"row\">".__('Wordwrap')."</th>";
-echo "<td><fieldset><legend class=\"hidden\">".__('Wordwrap')."</legend><label for=\"wordwrap\"><input name=\"" . wp_b64_wordwrap . "\" value=\"" . get_option(wp_b64_wordwrap) . "\" size=\"40\" class=\"code\" type=\"text\" /> ";
-echo __('How many characters per line you want')."</label><br /></fieldset></td>";
+echo "<th scope=\"row\">".__('Wordwrap', 'base64-encoderdecoder')."</th>";
+echo "<td><fieldset><legend class=\"hidden\">".__('Wordwrap', 'base64-encoderdecoder')."</legend><label for=\"wordwrap\"><input name=\"" . wp_b64_wordwrap . "\" value=\"" . get_option(wp_b64_wordwrap) . "\" size=\"40\" class=\"code\" type=\"text\" /> ";
+echo __('How many characters per line you want', 'base64-encoderdecoder')."</label><br /></fieldset></td>";
 ?>
     </tr><tr valign="top">
 <?php
-echo "<th scope=\"row\">".__('Block Format')."</th>";
-echo "<td><fieldset><legend class=\"hidden\">".__('Block Format')."</legend><label for=\"block_format\"><select name=\"" . wp_b64_format . "\"><option value=\"bq\"";
+echo "<th scope=\"row\">".__('Block Format', 'base64-encoderdecoder')."</th>";
+echo "<td><fieldset><legend class=\"hidden\">".__('Block Format', 'base64-encoderdecoder')."</legend><label for=\"block_format\"><select name=\"" . wp_b64_format . "\"><option value=\"bq\"";
 if($b64_format=='bq'){echo ' selected';}
-echo ">".__('Blockquote')."</option>";
+echo ">".__('Blockquote', 'base64-encoderdecoder')."</option>";
 echo "<option value=\"cd\"";
 if($b64_format=='cd'){echo ' selected';}
-echo ">".__('Code')."</option>";
+echo ">".__('Code', 'base64-encoderdecoder')."</option>";
 echo "<option value=\"no\"";
 if($b64_format=='no'){echo ' selected';}
-echo ">".__('None')."</option></select> ";
-echo __('Choose the html format for the text block')."</label><br /></fieldset></td>";
+echo ">".__('None', 'base64-encoderdecoder')."</option></select> ";
+echo __('Choose the html format for the text block', 'base64-encoderdecoder')."</label><br /></fieldset></td>";
 ?>
     </tr>
     </table>
 <?php
-echo "<h3>".__('Editing Options')."</h3>";
+echo "<h3>".__('Editing Options', 'base64-encoderdecoder')."</h3>";
 ?>
 	 <table class="form-table">
 	 <tr valign="top">
 <?php
-echo "<th scope=\"row\">".__('Display Post Button')."</th>";
-echo "<td><fieldset><legend class=\"hidden\">".__('Display Post Button')."</legend><label for=\"display_post_button\">";
+echo "<th scope=\"row\">".__('Display Post Button', 'base64-encoderdecoder')."</th>";
+echo "<td><fieldset><legend class=\"hidden\">".__('Display Post Button', 'base64-encoderdecoder')."</legend><label for=\"display_post_button\">";
 echo "<input name=\"" . wp_b64_button_option . "\" type=\"checkbox\" value=\"on\"";
 if ($b64_button_option=='on'){ echo ' checked';}
-echo " /> ".__('Hide/unhide the post button when you edit the post')."</label><br /></fieldset></td>";
+echo " /> ".__('Hide/unhide the post button when you edit the post', 'base64-encoderdecoder')."</label><br /></fieldset></td>";
 ?>
 	</tr>
     </table>
 <?php
   if (($oldtagcheck = wp_b64_old_tag_check()) == 1) {
-  	echo "<h3>".__('Old Tag Format')."</h3>";
-	echo "<p>".__('The configuration has detected and old tag format inside your WordPress database. If you wish to update to the new tag format, BACKUP YOUR DATABASE PREVIOUSLY and then press the <em><strong>Update Database</strong></em> button.')."</p>";
+  	echo "<h3>".__('Old Tag Format', 'base64-encoderdecoder')."</h3>";
+	echo "<p>".__('The configuration has detected and old tag format inside your WordPress database. If you wish to update to the new tag format, BACKUP YOUR DATABASE PREVIOUSLY and then press the <em><strong>Update Database</strong></em> button.', 'base64-encoderdecoder')."</p>";
   }
 ?>
     <p class="submit">
 <?php
-echo "<input type=\"submit\" name=\"update\" value=\"".__('Update Options')."\" />&nbsp; ";
-echo "<input type=\"submit\" name=\"reset\" value=\"".__('Reset Options')."\" />";
+echo "<input type=\"submit\" name=\"update\" value=\"".__('Update Options', 'base64-encoderdecoder')."\" />&nbsp; ";
+echo "<input type=\"submit\" name=\"reset\" value=\"".__('Reset Options', 'base64-encoderdecoder')."\" />";
   if (($oldtagcheck = wp_b64_old_tag_check()) == 1) {
-  	echo "&nbsp; <input type=\"submit\" name=\"updatedb\" value=\"".__('Update Database')."\" />";
+  	echo "&nbsp; <input type=\"submit\" name=\"updatedb\" value=\"".__('Update Database', 'base64-encoderdecoder')."\" />";
   	}
 ?>  </p>
     </form>
@@ -453,7 +453,7 @@ function wp_b64_filter_plugin_actions($links, $file){
 	if( !$this_plugin ) $this_plugin = plugin_basename(__FILE__);
 
 	if( $file == $this_plugin ) {
-		$settings_link = '<a href="admin.php?page=wp-b64-config">' . __('Settings') . '</a>';
+		$settings_link = '<a href="admin.php?page=wp-b64-config">' . __('Settings', 'base64-encoderdecoder') . '</a>';
 		$links = array_merge( array($settings_link), $links); // before other links
 	}
 	return $links;
