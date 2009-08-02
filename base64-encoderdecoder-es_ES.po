@@ -56,8 +56,8 @@ msgid "Button Text"
 msgstr "Texto del Bot&oacute;n"
 
 #: base64.php:324
-msgid "Text of the submit button"
-msgstr "Texto del bot&oacute;n de env&iacute;o"
+msgid "Text of the \"Submit\" button"
+msgstr "Texto del bot&oacute;n \"Enviar\""
 
 #: base64.php:328
 #: base64.php:329
