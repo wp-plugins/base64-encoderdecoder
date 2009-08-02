@@ -46,6 +46,12 @@ That's because I haven't learned yet how to add it, but I'm working on that.
 
 Rich Text Editor deletes all html-like tags that are not standard html tags. It will be solved when the Visual quicktag button is implemented.
 
+= Is there any way to get this plugin translated into other languages besides english and spanish? =
+
+Of course. Check for `base64-encoderdecoder.pot` file, create a copy and rename it to `base64-encoderdecoder-xx_XX.po`, replacing xx_XX with the corresponding shortcode for your language. Then translate it using poEdit. When you're done with translation, copy `base64-encoderdecoder-xx_XX.po` and .mo files to the place where the plugin is installed, and finally change the language setting on `wp-config.php`.
+
+If you want to contribute with your .po and .mo translations, go to the [Plugin Homepage](http://www.mrandersonmd.com/wordpress-plugins/base64-encoderdecoder-plugin-for-wordpress/) and contact me sending that files. I'll add them as soon as possible.
+
 = I think your plugin is great. How can I thank you besides rating it? =
 
 I thought you wouldn't ask. You can send me some bucks via PayPal, even USD$1 it's OK.
