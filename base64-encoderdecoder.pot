@@ -1,6 +1,7 @@
 # Localization File for Base64 Encoder/Decoder Plugin for Wordpress
 # This file was originally created by Edison Montes M. <edison.montes@gmail.com>
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.8.5\n"
@@ -56,7 +57,7 @@ msgid "Button Text"
 msgstr ""
 
 #: base64.php:324
-msgid "Text of the submit button"
+msgid "Text of the \"Submit\" button"
 msgstr ""
 
 #: base64.php:328

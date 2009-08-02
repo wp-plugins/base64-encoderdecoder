@@ -81,7 +81,7 @@ License:
 
 
 */
-
+load_plugin_textdomain('base64-encoderdecoder', "/wp-content/plugins/base64-encoderdecoder/");
 include_once(ABSPATH . WPINC . '/class-snoopy.php');
 
 wp_b64_variables();
