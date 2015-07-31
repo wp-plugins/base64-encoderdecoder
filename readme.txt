@@ -5,6 +5,8 @@ Tags: comments, tag, encoder, decoder, base64
 Requires at least: 2.0.5
 Tested up to: 4.2.3
 Stable tag: 0.9
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Enables you to encode parts of your post in base64.
 
@@ -32,7 +34,7 @@ Previous versions of this plugin used '&lt;!--base64--&gt;', '&lt;!--/base64--&g
 
 Yes, you can include html tags, they will be encrypted too.
 
-= I'm using an older version of this plugin wich uses '&lt;!--base64--&gt;' and '&lt;!--/base64--&gt;' tags. Do I have to edit all posts and change that tags to the new ones? =
+= I'm using an older version of this plugin wich uses '&lt;!--base64--&gt;', '&lt;!--/base64--&gt;', '&lt;base64&gt;' and '&lt;/base64&gt;' tags. Do I have to edit all posts and change that tags to the new ones? =
 
 This plugin has retro-compatibility, this means that you don't have to change that old tags, they will work too. But if you wish you can update the database replacing the old tag format to the new tag format with just one click.
 
@@ -46,28 +48,12 @@ I thought you wouldn't ask. You can send me some bucks via PayPal, even USD$1 it
 
 1. This screenshot shows how the encrypted text is shown inside the post, with the 'Decode' button at the end of the encrypted text block.
 
-== Credits ==
-
-Most parts of the code are not my creation, they were borrowed from people smarter than me, so I must thank to them.
-
-Thanks to [aNieto2k's AntiTroll Plugin](http://www.anieto2k.com/2006/02/08/plugin-antitroll/) for part of the code, because that was my first source when I knew nothing about creating a Wordpress Plugin.
-
-Thanks to [Random Snippets](http://www.randomsnippets.com/2008/03/07/how-to-find-and-replace-text-dynamically-via-javascript/) for the Javascript replacement script. Without it the plugin will be unable to replace text inline.
-
-Thanks to [Lorelle's Blog](http://lorelle.wordpress.com/2005/12/01/search-and-replace-in-wordpress-mysql-da tabase/) for the info on how to search and replace inside a Wordpress database.
-
-Thanks to [MyDigitalLife](http://www.mydigitallife.info/2006/06/24/retrieve-and-get-wordpress-post-id-outside-the-loop-as-php-variable/) for the info on how to identify the postID, helping me to solve the bug related to multiple base64 blocks showing on different posts at same time.
-
-Thanks to [Daniel Lorch](http://daniel.lorch.cc/docs/ajax_simple/) for the info on how to use AJAX inside the plugin, it was a clarificating example.
-
-Thanks to [Automatic Timezone Plugin](http://wordpress.org/extend/plugins/automatic-timezone/) for parts of script that adds "Settings" link to Admin Page in Installed Plugins Page.
-
-Thanks to [Famfamfam](http://www.famfamfam.com/lab/icons/silk/) for the key icon used for the Admin page.
-
-== Version History ==
+== Changelog ==
 
 + 0.9 (31 Jul 2015)
-	* TinyMCE plugin added for Visual Editor quicktag functionality
+	* Shortcode recode according to actual Codex instructions
+	* Quicktag recode according to actual Codex instructions
+	* Deleted legacy code no longer needed
 + 0.8.2 (13 Mar 2009)
 	* Minor bug related to remote version check fixed
 	* Optimization of minor parts of the code
@@ -98,3 +84,26 @@ Thanks to [Famfamfam](http://www.famfamfam.com/lab/icons/silk/) for the key icon
 	* Optimized checking for paired tag formatting
 + 0.1 (21 Oct 2006)
 	* First release
+	
+== Upgrade Notice ==
+
++ 0.9 (31 Jul 2015)
+	* Minor upgrade to comply with current WordPress standards
+	
+== Credits ==
+
+Most parts of the code are not my creation, they were borrowed from people smarter than me, so I must thank to them.
+
+Thanks to [aNieto2k's AntiTroll Plugin](http://www.anieto2k.com/2006/02/08/plugin-antitroll/) for part of the code, because that was my first source when I knew nothing about creating a Wordpress Plugin.
+
+Thanks to [Random Snippets](http://www.randomsnippets.com/2008/03/07/how-to-find-and-replace-text-dynamically-via-javascript/) for the Javascript replacement script. Without it the plugin will be unable to replace text inline.
+
+Thanks to [Lorelle's Blog](http://lorelle.wordpress.com/2005/12/01/search-and-replace-in-wordpress-mysql-da tabase/) for the info on how to search and replace inside a Wordpress database.
+
+Thanks to [MyDigitalLife](http://www.mydigitallife.info/2006/06/24/retrieve-and-get-wordpress-post-id-outside-the-loop-as-php-variable/) for the info on how to identify the postID, helping me to solve the bug related to multiple base64 blocks showing on different posts at same time.
+
+Thanks to [Daniel Lorch](http://daniel.lorch.cc/docs/ajax_simple/) for the info on how to use AJAX inside the plugin, it was a clarificating example.
+
+Thanks to [Automatic Timezone Plugin](http://wordpress.org/extend/plugins/automatic-timezone/) for parts of script that adds "Settings" link to Admin Page in Installed Plugins Page.
+
+Thanks to [Famfamfam](http://www.famfamfam.com/lab/icons/silk/) for the key icon used for the Admin page.
