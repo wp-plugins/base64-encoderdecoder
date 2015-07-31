@@ -1,0 +1,128 @@
+# Localization File for Base64 Encoder/Decoder Plugin for Wordpress
+# This file was originally created by Edison Montes M. <edison.montes@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.8.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/base64-encoderdecoder\n"
+"POT-Creation-Date: 2009-07-30 01:42+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Edison Montes M. <edison.montes@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: base64.php:99
+msgid "Decode"
+msgstr "Decodificar"
+
+#: base64.php:275
+msgid "Base64 Enc/Dec"
+msgstr "Base64 Cod/Dec"
+
+#: base64.php:276
+msgid "Base64 Enc/Dec Configuration"
+msgstr "Configuraci&oacute;n de Base64 Cod/Dec"
+
+#: base64.php:288
+msgid "Options Updated"
+msgstr "Opciones Actualizadas"
+
+#: base64.php:295
+msgid "Options Reseted"
+msgstr "Opciones Restauradas"
+
+#: base64.php:299
+msgid "Database updated to new tag format"
+msgstr "La Base de datos fue actualizada al nuevo formato de etiquetas"
+
+#: base64.php:305
+#, php-format
+msgid "There is a <strong><a href=\"%1$s\" title=\"%2$s\">NEW</a></strong> version available. You can download it <a href=\"%3$s.zip\">HERE</a>"
+msgstr "Hay una <strong><a href=\"%1$s\" title=\"%2$s\">NUEVA</a></strong> versi&oacute;n disponible. Puede descargarla <a href=\"%3$s.zip\">AQU&Iacute;</a>"
+
+#: base64.php:312
+msgid "Base64 Encoder/Decoder Options"
+msgstr "Opciones de Base64 Codificador/Decodificador"
+
+#: base64.php:317
+msgid "Display Options"
+msgstr "Opciones de Visualizaci&oacute;n"
+
+#: base64.php:322
+#: base64.php:323
+msgid "Button Text"
+msgstr "Texto del Bot&oacute;n"
+
+#: base64.php:324
+msgid "Text of the \"Submit\" button"
+msgstr "Texto del bot&oacute;n \"Enviar\""
+
+#: base64.php:328
+#: base64.php:329
+msgid "Wordwrap"
+msgstr "Caracteres por L&iacute;nea"
+
+#: base64.php:330
+msgid "How many characters per line you want"
+msgstr "Cu&aacute;ntos caracteres por l&iacute;nea desea visualizar"
+
+#: base64.php:334
+#: base64.php:335
+msgid "Block Format"
+msgstr "Formato del Bloque"
+
+#: base64.php:337
+msgid "Blockquote"
+msgstr "Blockquote"
+
+#: base64.php:340
+msgid "Code"
+msgstr "Code"
+
+#: base64.php:343
+msgid "None"
+msgstr "Ninguno"
+
+#: base64.php:344
+msgid "Choose the html format for the text block"
+msgstr "Elija el formato html para el bloque de texto"
+
+#: base64.php:349
+msgid "Editing Options"
+msgstr "Opciones de Edici&oacute;n"
+
+#: base64.php:354
+#: base64.php:355
+msgid "Display Post Button"
+msgstr "Visualizar el Bot&oacute;n de Edici&oacute;n"
+
+#: base64.php:358
+msgid "Hide/unhide the post button when you edit the post"
+msgstr "Ocultar/mostrar el bot&oacute;n de c&oacute;digo r&aacute;pido al editar la entrada"
+
+#: base64.php:364
+msgid "Old Tag Format"
+msgstr "Formato de Etiqueta Antiguo"
+
+#: base64.php:365
+msgid "The configuration has detected and old tag format inside your WordPress database. If you wish to update to the new tag format, BACKUP YOUR DATABASE PREVIOUSLY and then press the <em><strong>Update Database</strong></em> button."
+msgstr "La configuraci&oacute;n detect&oacute; un formato de etiqueta antiguo en la base de datos de WordPress. Si desea actualizarlo al nuevo formato de etiqueta, RESPALDE SU BASE DE DATOS PREVIAMENTE y luego presione el bot&oacute;n <em><strong>Actualizar Base de Datos</strong></em>."
+
+#: base64.php:370
+msgid "Update Options"
+msgstr "Actualizar Opciones"
+
+#: base64.php:370
+msgid "Reset Options"
+msgstr "Restaurar Opciones"
+
+#: base64.php:370
+msgid "Update Database"
+msgstr "Actualizar Base de Datos"
+
+#: base64.php:456
+msgid "Settings"
+msgstr "Configuraci&oacute;n"
+
