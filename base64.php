@@ -10,41 +10,41 @@ License: GPL
 
 VERSION HISTORY:
 
-0.9 (31 Jul 2015)
+0.9 (Jul 31, 2015)
 	* Shortcode recode according to actual Codex instructions
 	* Quicktag recode according to actual Codex instructions
 	* Deleted legacy code no longer needed
-0.8.5 (01 Aug 2009)
+0.8.5 (Aug 01, 2009)
 	* Added Internationalization file
-0.8.2 (13 Mar 2009)
+0.8.2 (Mar 13, 2009)
 	* Minor bug related to remote version check fixed
 	* Optimization of minor parts of the code
-0.8 (02 Mar 2009)
+0.8 (Mar 01, 2009)
 	* Added AJAX inline text replacement
-0.7.1 (25 Feb 2009)
+0.7.1 (Feb 25, 2009)
 	* Fixed a bug related to multiple base64 blocks showing on different posts at the same time
-0.7 (03 Feb 2009)
+0.7 (Feb 03, 2009)
 	* Database update function from old tags to new ones
-0.6.1 (02 Feb 2009)
+0.6.1 (Feb 02, 2009)
 	* Fixed some bugs related to double quotes inside a base64 block
 	* Deleted redundant and unnecesary code
-0.6 (30 Jan 2009)
+0.6 (Jan 30, 2009)
 	* Inline replacement, no need for different flavors
 	* Removed post title variable because of inline replacement
 	* New tag format html-styled with retro-compatibility
 	* Revamped configuration page
-0.4.2 (16 Jul 2007)
+0.4.2 (Jul 16, 2007)
 	* Minor quicktag bug fixed
-0.4 (13 Nov 2006)
+0.4 (Nov 13, 2006)
 	* Added checking for new versions
 	* Added Quicktags button and configurable activation/deactivation
-0.3 (26 Oct 2006)
+0.3 (Oct 26, 2006)
 	* Added options screen
 	* Configurable wordwrap, text block html formatting, new post title and submit button text
-0.2 (23 Oct 2006)
+0.2 (Oct 23, 2006)
 	* Multiple base64 encoded blocks
 	* Optimized checking for paired tag formatting
-0.1 (21 Oct 2006)
+0.1 (Oct 21, 2006)
 	* First release, just functional
 	
 CREDITS:
@@ -68,7 +68,7 @@ Thanks to Famfamfam for the key icon used for the Admin page. (http://www.famfam
 
 LICENSE:
 
-Copyright 2006-2009  Edison Montes M.  (email : webmaster@mrandersonmd.cl)
+Copyright 2006-2015  Edison Montes M.  (email : webmaster@mrandersonmd.cl)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
