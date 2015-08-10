@@ -1,0 +1,136 @@
+# WordPress Blank Pot
+# Copyright (C) 2014 ...
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Base64 Encoder/Decoder\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2015-08-09 20:52-0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Edison Montes M. <edison.montes@gmail.com>\n"
+"Language-Team: Edison Montes M. <edison.montes@gmail.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: base64-encoderdecoder.php:90
+msgid "Decode"
+msgstr "Decodificar"
+
+#: base64-encoderdecoder.php:198
+msgid "Base64 Enc/Dec"
+msgstr "Base64 Cod/Dec"
+
+#: base64-encoderdecoder.php:199
+msgid "Base64 Enc/Dec Configuration"
+msgstr "Configuración de Base64 Cod/Dec"
+
+#: base64-encoderdecoder.php:213
+msgid "Options Updated"
+msgstr "Opciones Actualizadas"
+
+#: base64-encoderdecoder.php:220
+msgid "Options Reseted"
+msgstr "Opciones Restauradas"
+
+#: base64-encoderdecoder.php:224
+msgid "Database updated to new tag format"
+msgstr "Base de datos actualizada al nuevo formato de etiquetas"
+
+#: base64-encoderdecoder.php:231
+msgid "Base64 Encoder/Decoder Options"
+msgstr "Base64 Codificador/Decodificador"
+
+#: base64-encoderdecoder.php:236
+msgid "Display Options"
+msgstr "Opciones de Visualización"
+
+#: base64-encoderdecoder.php:241 base64-encoderdecoder.php:242
+msgid "Button Text"
+msgstr "Texto del Botón"
+
+#: base64-encoderdecoder.php:243
+msgid "Text of the submit button"
+msgstr "Texto del botón \"Enviar\""
+
+#: base64-encoderdecoder.php:247 base64-encoderdecoder.php:248
+msgid "Wordwrap"
+msgstr "Ajuste de Línea"
+
+#: base64-encoderdecoder.php:249
+msgid "How many characters per line you want"
+msgstr "Cuántos caracteres por línea desea visualizar"
+
+#: base64-encoderdecoder.php:253 base64-encoderdecoder.php:254
+msgid "Block Format"
+msgstr "Formato del Bloque"
+
+#: base64-encoderdecoder.php:256
+msgid "Blockquote"
+msgstr "Blockquote"
+
+#: base64-encoderdecoder.php:259
+msgid "Code"
+msgstr "Code"
+
+#: base64-encoderdecoder.php:262
+msgid "None"
+msgstr "Ninguno"
+
+#: base64-encoderdecoder.php:263
+msgid "Choose the html format for the text block"
+msgstr "Elija el formato html para el bloque de texto"
+
+#: base64-encoderdecoder.php:268
+msgid "Editing Options"
+msgstr "Opciones de Edición"
+
+#: base64-encoderdecoder.php:273 base64-encoderdecoder.php:274
+msgid "Display Post Button"
+msgstr "Visualizar el Botón de Edición"
+
+#: base64-encoderdecoder.php:277
+msgid "Hide/unhide the post button when you edit the post"
+msgstr "Ocultar/Mostrar el Botón de Código Rápido cuando se edita la entrada"
+
+#: base64-encoderdecoder.php:283
+msgid "Old Tag Format"
+msgstr "Formato de Etiqueta Antiguo"
+
+#: base64-encoderdecoder.php:284
+msgid ""
+"The configuration has detected and old tag format inside your WordPress "
+"database. If you wish to update to the new tag format, BACKUP YOUR DATABASE "
+"PREVIOUSLY and then press the <em><strong>Update Database</strong></em> "
+"button."
+msgstr ""
+"La configuración ha detectado un formato de etiqueta antiguo en su base de "
+"datos de WordPress. Si desea actualizar al nuevo formato de etiqueta, "
+"RESPALDE SU BASE DE DATOS PREVIAMENTE y luego presione el botón "
+"<em><strong>Actualizar Base de Datos</strong></em>."
+
+#: base64-encoderdecoder.php:289
+msgid "Update Options"
+msgstr "Actualizar Opciones"
+
+#: base64-encoderdecoder.php:290
+msgid "Reset Options"
+msgstr "Restaurar Opciones"
+
+#: base64-encoderdecoder.php:292
+msgid "Update Database"
+msgstr "Actualizar Base de Datos"
+
+#: base64-encoderdecoder.php:339
+msgid "Settings"
+msgstr "Configuración"
