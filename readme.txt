@@ -4,9 +4,9 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: comments, tag, encoder, decoder, base64
 Requires at least: 2.0.5
 Tested up to: 4.2.3
-Stable tag: 0.9
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 0.9.1
+License: GPL3
+License URI: https://www.gnu.org/licenses/gpl.html
 
 Enables you to encode parts of your post in base64.
 
@@ -50,6 +50,10 @@ I thought you wouldn't ask. You can send me some bucks via PayPal, even USD$1 it
 
 == Changelog ==
 
++ 0.9.1 (Aug 10, 2015)
+	* Plugin Header optimized according to WordPress Plugin Handbook
+	* Internationalization according to WordPress Plugin Handbook
+	* Deleted remote update function, is redundant and innecesary because the plugin is hosted by WordPress
 + 0.9 (Jul 31, 2015)
 	* Shortcode recode according to actual Codex instructions
 	* Quicktag recode according to actual Codex instructions
@@ -87,7 +91,7 @@ I thought you wouldn't ask. You can send me some bucks via PayPal, even USD$1 it
 	
 == Upgrade Notice ==
 
-+ 0.9 (Jul 31, 2015)
++ 0.9.1 (Aug 10, 2015)
 	* Minor upgrade to comply with current WordPress standards
 	
 == Credits ==
