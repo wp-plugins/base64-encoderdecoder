@@ -3,8 +3,8 @@ Contributors: mranderson
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2920389
 Tags: comments, tag, encoder, decoder, base64
 Requires at least: 2.0.5
-Tested up to: 4.2.3
-Stable tag: 0.9.1
+Tested up to: 4.3
+Stable tag: 0.9.2
 License: GPL3
 License URI: https://www.gnu.org/licenses/gpl.html
 
@@ -50,18 +50,26 @@ I thought you wouldn't ask. You can send me some bucks via PayPal, even USD$1 it
 
 == Changelog ==
 
++ 0.9.2 (Sep 05, 2015)
+	* Cosmetic changes to Administration page
+	* Added CSS styling to Administration page
+	* Added Paypal button
+	* Quicktag not working, removed temporarily
+	* Bugs fixed
 + 0.9.1 (Aug 10, 2015)
 	* Plugin Header optimized according to WordPress Plugin Handbook
 	* Internationalization according to WordPress Plugin Handbook
-	* Deleted remote update function, is redundant and innecesary because the plugin is hosted by WordPress
+	* Deleted remote update function, it was redundant and innecesary now that the plugin is hosted by WordPress SVN
 + 0.9 (Jul 31, 2015)
 	* Shortcode recode according to actual Codex instructions
 	* Quicktag recode according to actual Codex instructions
 	* Deleted legacy code no longer needed
++ 0.8.5 (Aug 01, 2009)
+	* Added Internationalization file
 + 0.8.2 (Mar 13, 2009)
 	* Minor bug related to remote version check fixed
 	* Optimization of minor parts of the code
-+ 0.8 (Mar 02, 2009)
++ 0.8 (Mar 01, 2009)
 	* Added AJAX inline text replacement
 + 0.7.1 (Feb 25, 2009)
 	* Fixed a bug related to multiple base64 blocks showing on different posts at the same time
@@ -91,7 +99,7 @@ I thought you wouldn't ask. You can send me some bucks via PayPal, even USD$1 it
 	
 == Upgrade Notice ==
 
-+ 0.9.1 (Aug 10, 2015)
++ 0.9.2 (Sep 05, 2015)
 	* Minor upgrade to comply with current WordPress standards
 	
 == Credits ==
