@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bas64-encoderdecoder\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-09-04 13:25-0300\n"
+"POT-Creation-Date: 2015-09-06 00:01-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Edison Montes M. <edison.montes@gmail.com>\n"
 "Language-Team: \n"
@@ -140,4 +140,10 @@ msgstr ""
 
 #: base64-options.php:74
 msgid "Update Database"
+msgstr ""
+
+#: base64-options.php:80
+msgid ""
+"If you find this plugin useful, please consider donating a small amount "
+"through Paypal"
 msgstr ""

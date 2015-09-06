@@ -77,7 +77,7 @@ echo "</p></form></div>";
 
 echo "<div id=\"b64-paypal\">";
 echo "<form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"_top\">";
-echo "<p>If you find this plugin useful, please consider donating a small amount through Paypal<br/><br/>";
+echo "<p>".__('If you find this plugin useful, please consider donating a small amount through Paypal', 'base64-encoderdecoder')."<br/><br/>";
 echo "<select name=\"amount\">";
 echo "<option value=\"1.00\">$1.00 USD</option>";
 echo "<option value=\"2.00\">$2.00 USD</option>";
