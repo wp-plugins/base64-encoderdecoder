@@ -1,4 +1,4 @@
-=== WP-Base64 Encoder/Decoder ===
+=== Base64 Encoder/Decoder ===
 Contributors: mranderson
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2920389
 Tags: comments, tag, encoder, decoder, base64
@@ -12,7 +12,7 @@ Enables you to encode parts of your post in base64.
 
 == Description ==
 
-WP-Base64 Encoder/Decoder is a Wordpress Plugin that enables you to encode parts of your post in base64. The encoded text looks like unreadable text, but when you press the "Decode" button it gets readable with inline replacement using AJAX, so it's invisible to search robots.
+Base64 Encoder/Decoder is a Wordpress Plugin that enables you to encode parts of your post in base64. The encoded text looks like unreadable text, but when you press the "Decode" button it gets readable with inline replacement using AJAX, so it's invisible to search robots.
 
 It uses '&#91;base64&#93;' and '&#91;/base64&#93;' tags for opening and closing the parts of post you need to encode. The tags are browser invisible, this is, if you decide to deactivate the plugin, the content enclosed by this tags will be shown like normal text in the post.
 
